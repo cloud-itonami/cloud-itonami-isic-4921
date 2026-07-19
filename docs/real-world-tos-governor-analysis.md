@@ -11,7 +11,7 @@ this repo's own `src/transitops/governor.cljc`.
 | Transdev Group SA | [cloud-itonami-lei-969500lmwjbg5rhvjv88](https://github.com/cloud-itonami/cloud-itonami-lei-969500lmwjbg5rhvjv88) | website Terms and Conditions of Use |
 | ComfortDelGro Corporation Limited | [cloud-itonami-lei-2549005o5pva2jch6q33](https://github.com/cloud-itonami/cloud-itonami-lei-2549005o5pva2jch6q33) | website Terms of Use |
 | FirstGroup plc (First Bus brand) | [cloud-itonami-lei-549300dejzcpwa4hkm93](https://github.com/cloud-itonami/cloud-itonami-lei-549300dejzcpwa4hkm93) | website Terms of Use |
-| The Go-Ahead Group Limited (Go-Ahead London brand) | [cloud-itonami-lei-2138009tf1syomqlbj60](https://github.com/cloud-itonami/cloud-itonami-lei-2138009tf1syomqlbj60) | website Terms |
+| The Go-Ahead Group Limited (Go-Ahead London brand) | [cloud-itonami-lei-2138009tf1syomqlbj60](https://github.com/cloud-itonami/cloud-itonami-lei-2138009tf1syomqlbj60) | website Terms **+ the actual Conditions of Carriage** (added 2026-07-19, see Finding 5) |
 | RATP Developpement | [cloud-itonami-lei-969500j9kg4hf67vc976](https://github.com/cloud-itonami/cloud-itonami-lei-969500j9kg4hf67vc976) | website legal notice |
 | Keolis SA | [cloud-itonami-lei-969500568m45lz4wyf39](https://github.com/cloud-itonami/cloud-itonami-lei-969500568m45lz4wyf39) | website legal notice (mentions légales) |
 | SBS Transit Ltd | [cloud-itonami-lei-254900em62y5rrtj9771](https://github.com/cloud-itonami/cloud-itonami-lei-254900em62y5rrtj9771) | website Conditions for Use |
@@ -20,19 +20,21 @@ this repo's own `src/transitops/governor.cljc`.
 
 ## Methodology and an honest limitation (read this before the findings)
 
-**None of these 7 documents is the operator's actual Conditions of
-Carriage or passenger charter** — every one is a generic *corporate
-website* terms-of-use/legal-notice page, the kind of document that
-governs browsing the operator's website, not riding its buses. The
-one archived document in the whole `cloud-itonami-lei` catalog that
-*is* an actual Conditions of Carriage is Flix SE's (analyzed in the
-sibling repo
-[`cloud-itonami-isic-4922`](https://github.com/cloud-itonami/cloud-itonami-isic-4922)'s
-own `docs/real-world-tos-governor-analysis.md`). The findings below
-are therefore weaker evidence than that sibling analysis — they show
-a real, consistent, cross-jurisdiction pattern in these operators'
-*general liability boilerplate*, not their actual passenger-carriage
-liability regime. Every quoted clause below is copied verbatim from
+**Originally (2026-07-19, first pass), none of these documents was the
+operator's actual Conditions of Carriage or passenger charter** —
+every one was a generic *corporate website* terms-of-use/legal-notice
+page, the kind of document that governs browsing the operator's
+website, not riding its buses. **This has since been partly fixed**:
+The Go-Ahead Group's real Conditions of Carriage was located and
+added to its LEI repo the same day (see Finding 5 below), alongside
+Flix SE's Conditions of Carriage in the sibling
+[`cloud-itonami-isic-4922`](https://github.com/cloud-itonami/cloud-itonami-isic-4922)
+repo. The remaining companies (Transdev, ComfortDelGro, FirstGroup,
+RATP Dev, Keolis, SBS Transit) are still website-only, so Findings 1–2
+below draw on a *mix* of website boilerplate and, for Go-Ahead
+specifically, real carriage terms — read Finding 5 for the stronger
+evidence and the earlier findings for the still-honest weaker-evidence
+caveat on the rest. Every quoted clause below is copied verbatim from
 the archived journal entries (`80-data/public/tos.journal.edn` in each
 linked repo) — nothing here is paraphrased from memory or invented.
 
@@ -143,6 +145,43 @@ operator or regulator comparing the two models would find this actor
 architecturally stricter on this specific point) — not as a criticism
 of Grab or Uber's real legal posture, which reflects their own
 platform-liability strategy, not a defect.
+
+## Finding 5: The Go-Ahead Group's real Conditions of Carriage closes this analysis's own stated gap
+
+The Methodology section above states plainly that none of the original
+7 urban-transit documents was an actual Conditions of Carriage. That
+gap is now partly closed: The Go-Ahead Group's real, group-wide
+Conditions of Carriage (published via its Go South Coast subsidiary
+site, applying to Go-Ahead Group member companies' UK bus/coach
+services generally, not just the website) was located and archived
+into the existing `cloud-itonami-lei-2138009tf1syomqlbj60` repo
+alongside its original website Terms of Use.
+
+Two real clauses from this document directly strengthen Findings 1
+and 2:
+
+> "We reserve the right to refuse entry and travel of any person onto
+> our buses and coaches if that person is considered to be
+> undesirable, a **security or safety risk**... or who may otherwise
+> cause a nuisance or disturbance."
+
+— the same "human staff, on the vehicle, exercising real-time safety
+judgment" pattern already found in Flix SE's Conditions of Carriage
+(§9.2, `cloud-itonami-isic-4922`'s analysis) — now confirmed in a
+*second*, independent, UK urban-bus operator's actual carriage terms,
+not just an intercity-coach operator's.
+
+> "However, we are unable to accept any responsibility... unless such
+> loss, damage, injury, inconvenience or cost can be proven to be due
+> to the negligence of either us or our staff... **Your statutory
+> rights as a consumer are, though, not excluded or limited.**"
+
+— the same non-excludable statutory floor pattern already found in
+FirstGroup's and Keolis's website terms (Finding 1), now confirmed in
+an actual Conditions of Carriage document rather than a website ToU
+page — meaningfully stronger evidence for Finding 1's core claim,
+since this is the document that actually governs the ride, not the
+website.
 
 ## What this analysis does NOT claim
 
