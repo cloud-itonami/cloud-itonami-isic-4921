@@ -8,7 +8,7 @@ this repo's own `src/transitops/governor.cljc`.
 
 | Company | LEI repo | Document type actually archived |
 |---|---|---|
-| Transdev Group SA | [cloud-itonami-lei-969500lmwjbg5rhvjv88](https://github.com/cloud-itonami/cloud-itonami-lei-969500lmwjbg5rhvjv88) | website Terms and Conditions of Use |
+| Transdev Group SA | [cloud-itonami-lei-969500lmwjbg5rhvjv88](https://github.com/cloud-itonami/cloud-itonami-lei-969500lmwjbg5rhvjv88) | website Terms and Conditions of Use **+ the actual Conditions of Carriage** (added 2026-07-19, see Finding 6) |
 | ComfortDelGro Corporation Limited | [cloud-itonami-lei-2549005o5pva2jch6q33](https://github.com/cloud-itonami/cloud-itonami-lei-2549005o5pva2jch6q33) | website Terms of Use |
 | FirstGroup plc (First Bus brand) | [cloud-itonami-lei-549300dejzcpwa4hkm93](https://github.com/cloud-itonami/cloud-itonami-lei-549300dejzcpwa4hkm93) | website Terms of Use |
 | The Go-Ahead Group Limited (Go-Ahead London brand) | [cloud-itonami-lei-2138009tf1syomqlbj60](https://github.com/cloud-itonami/cloud-itonami-lei-2138009tf1syomqlbj60) | website Terms **+ the actual Conditions of Carriage** (added 2026-07-19, see Finding 5) |
@@ -182,6 +182,36 @@ an actual Conditions of Carriage document rather than a website ToU
 page — meaningfully stronger evidence for Finding 1's core claim,
 since this is the document that actually governs the ride, not the
 website.
+
+## Finding 6: a third independent operator's real carriage terms confirm the same human-safety-judgment pattern
+
+Transdev Travel's real, currently-published Conditions of Carriage
+(a Transdev group coach-travel subsidiary) was located and added to
+the existing Transdev Group SA LEI repo alongside its original
+website terms. Two more real, verbatim clauses:
+
+> "The company reserves the right for itself or its representative to
+> refuse carriage or to disembark a passenger when, on reasonable
+> grounds, this decision appears necessary for **reasons of safety**
+> or when the mental or physical behaviour of the passenger is such
+> as to create a nuisance or **present a danger to other
+> passengers**."
+>
+> "The carrier's vehicles are **insured for unlimited civil liability**
+> in respect of the passengers carried."
+
+This is now the **third independent real operator** (after Flix SE's
+Conditions of Carriage in `cloud-itonami-isic-4922`, and Go-Ahead's
+in Finding 5 above) whose actual carriage contract assigns safety-
+based refusal authority to human staff on reasonable grounds, and
+carries liability for passenger harm that is not capped the way
+luggage/property damage is. Three independent operators across three
+countries (Germany, UK, France) converging on the identical structural
+pattern is meaningfully stronger evidence than any single instance —
+this is not a coincidence of one carrier's drafting style, it is how
+real passenger-carriage law and practice actually works across
+jurisdictions, and it is the same principle
+`transitops.governor`'s permanent scope-exclusion encodes.
 
 ## What this analysis does NOT claim
 
