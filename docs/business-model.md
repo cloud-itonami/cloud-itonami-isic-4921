@@ -73,7 +73,12 @@ the same catalog:
 [**ComfortDelGro Corporation Limited**](https://github.com/cloud-itonami/cloud-itonami-lei-2549005o5pva2jch6q33)
 (LEI `2549005O5PVA2JCH6Q33`, Singapore/UK/Australia/China) and
 [**FirstGroup plc**](https://github.com/cloud-itonami/cloud-itonami-lei-549300dejzcpwa4hkm93)
-(LEI `549300DEJZCPWA4HKM93`, UK First Bus network).
+(LEI `549300DEJZCPWA4HKM93`, UK First Bus network),
+[**The Go-Ahead Group Limited**](https://github.com/cloud-itonami/cloud-itonami-lei-2138009tf1syomqlbj60)
+(LEI `2138009TF1SYOMQLBJ60`, UK Go-Ahead London network) and
+[**RATP Developpement**](https://github.com/cloud-itonami/cloud-itonami-lei-969500j9kg4hf67vc976)
+(LEI `969500J9KG4HF67VC976`, France, international urban-transit
+operations).
 
 ## Trust Controls
 - `:urban-transit-dispatch-governor` never lets a proposal for an
