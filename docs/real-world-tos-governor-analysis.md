@@ -1,9 +1,10 @@
 # Real-world published terms vs. the Urban Transit Dispatch Governor
 
 **As-of**: 2026-07-19
-**Compares**: the archived `:tos/full-text` of 7 real urban-transit
-operators in the `cloud-itonami-lei` catalog (all retrieved 2026-07-19)
-against this repo's own `src/transitops/governor.cljc`.
+**Compares**: the archived `:tos/full-text` of 9 real operators (7
+fixed-route urban-transit operators + 2 taxi/rideshare platforms) in
+the `cloud-itonami-lei` catalog (all retrieved 2026-07-19) against
+this repo's own `src/transitops/governor.cljc`.
 
 | Company | LEI repo | Document type actually archived |
 |---|---|---|
@@ -14,6 +15,8 @@ against this repo's own `src/transitops/governor.cljc`.
 | RATP Developpement | [cloud-itonami-lei-969500j9kg4hf67vc976](https://github.com/cloud-itonami/cloud-itonami-lei-969500j9kg4hf67vc976) | website legal notice |
 | Keolis SA | [cloud-itonami-lei-969500568m45lz4wyf39](https://github.com/cloud-itonami/cloud-itonami-lei-969500568m45lz4wyf39) | website legal notice (mentions légales) |
 | SBS Transit Ltd | [cloud-itonami-lei-254900em62y5rrtj9771](https://github.com/cloud-itonami/cloud-itonami-lei-254900em62y5rrtj9771) | website Conditions for Use |
+| Uber Technologies, Inc. | [cloud-itonami-lei-549300b2ftg34fildr98](https://github.com/cloud-itonami/cloud-itonami-lei-549300b2ftg34fildr98) | U.S. Terms of Service (taxi/rideshare) |
+| Grab Holdings Inc. | [cloud-itonami-lei-549300g8zpnq5dni6a45](https://github.com/cloud-itonami/cloud-itonami-lei-549300g8zpnq5dni6a45) | Singapore Terms of Service: Transport, Delivery and Logistics (taxi/rideshare) |
 
 ## Methodology and an honest limitation (read this before the findings)
 
@@ -102,6 +105,44 @@ trusted from a proposal) is jurisdiction-agnostic by design specifically
 operators this legally diverse — each fork is expected to seed its own
 real route/vehicle/operator registry against its own jurisdiction's
 actual licensing authority.
+
+## Finding 4: taxi/rideshare platforms' own terms explicitly disclaim partner-suitability verification — a CONTRAST with the governor's design, not a confirmation
+
+This actor's own scope (README) names "taxi/rideshare dispatch"
+alongside fixed-route bus/tram service, so the catalog also archives
+two real ride-hailing platforms. Unlike Findings 1–3, this one is a
+genuine **contrast**, not a parallel — worth recording precisely
+because an honest analysis reports what it actually finds, not only
+the confirmations.
+
+Grab Holdings Inc., real published Terms of Service §21.2:
+
+> "GRAB DOES NOT WARRANT OR REPRESENT THAT IT ASSESSES OR MONITORS THE
+> **SUITABILITY, LEGALITY, ABILITY**, MOVEMENT OR LOCATION OF ANY
+> CONSUMERS OR PARTNERS... AND YOU EXPRESSLY WAIVE AND RELEASE GRAB
+> FROM ANY AND ALL LIABILITY... ARISING FROM OR IN ANY WAY RELATED TO
+> THE CONSUMERS OR PARTNERS."
+
+Uber Technologies, Inc.'s own Terms of Service similarly frame the
+company primarily as a technology-platform intermediary between riders
+and independent transportation providers (§8), with disputes routed to
+binding individual arbitration (§2) rather than litigated on the
+platform's own duty of care.
+
+`transitops.governor` takes the structurally opposite position:
+`vehicle-unverified-violations` and `operator-unverified-violations`
+are HARD, permanent blocks — a `:schedule-dispatch-operation` proposal
+naming an unregistered/unverified vehicle or operator can **never**
+commit or even escalate, full stop, re-derived from the store's own
+records and never trusted from the proposal. Where a real, large
+ride-hailing platform's own contract explicitly disclaims assessing
+partner suitability, this actor's architecture makes that exact
+assessment a non-negotiable gate. This is worth stating plainly as a
+genuine **design differentiator** this blueprint could point to (an
+operator or regulator comparing the two models would find this actor
+architecturally stricter on this specific point) — not as a criticism
+of Grab or Uber's real legal posture, which reflects their own
+platform-liability strategy, not a defect.
 
 ## What this analysis does NOT claim
 
