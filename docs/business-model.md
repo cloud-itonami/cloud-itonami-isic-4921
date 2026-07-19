@@ -41,8 +41,9 @@ sales motion.
   support), no recurring platform fee — the operator runs its own
   instance.
 - **Managed Starter**: **¥80,000/month flat** (JPY, no-code Stripe
-  Payment Link), unlimited routes/vehicles/operators for a single
-  small-to-mid operator instance — consistent with the
+  Payment Link: https://buy.stripe.com/eVq14m3Sb9JSg12dIzbMQ0f),
+  unlimited routes/vehicles/operators for a single small-to-mid
+  operator instance — consistent with the
   `cloud-itonami` portfolio's existing Managed Starter reference point
   (`docs/adr/2607161745` at `com-junkawasaki/root`) and comfortably
   inside the $20-100/vehicle/month real competitor range for an
