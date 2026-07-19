@@ -78,7 +78,14 @@ the same catalog:
 (LEI `2138009TF1SYOMQLBJ60`, UK Go-Ahead London network) and
 [**RATP Developpement**](https://github.com/cloud-itonami/cloud-itonami-lei-969500j9kg4hf67vc976)
 (LEI `969500J9KG4HF67VC976`, France, international urban-transit
-operations).
+operations),
+[**Keolis SA**](https://github.com/cloud-itonami/cloud-itonami-lei-969500568m45lz4wyf39)
+(LEI `969500568M45LZ4WYF39`, France, 70% SNCF-owned, one of the
+world's largest public-transit operators by contract count) and
+[**SBS Transit Ltd**](https://github.com/cloud-itonami/cloud-itonami-lei-254900em62y5rrtj9771)
+(LEI `254900EM62Y5RRTJ9771`, Singapore's largest public bus operator,
+75%-owned by ComfortDelGro — a distinct entity from the ComfortDelGro
+entry above).
 
 ## Trust Controls
 - `:urban-transit-dispatch-governor` never lets a proposal for an
