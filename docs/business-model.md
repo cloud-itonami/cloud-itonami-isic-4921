@@ -57,6 +57,19 @@ No paid tenant yet (self-reported honestly, not fabricated) — see
 `90-docs/business/cloud-itonami-flagship-rollout-ledger.edn` at
 `com-junkawasaki/root` for this vertical's rollout status.
 
+### Real-world operator landscape
+
+This blueprint is generic and forkable — it is not affiliated with, and
+has no code dependency on, any specific real operator. For market/
+competitive context, the `cloud-itonami-lei` catalog (ADR-2607110300 at
+`com-junkawasaki/root`) archives the published Terms and Conditions of
+Use of
+[**Transdev Group SA**](https://github.com/cloud-itonami/cloud-itonami-lei-969500lmwjbg5rhvjv88)
+(LEI `969500LMWJBG5RHVJV88`, GLEIF-verified), one of the largest
+operators of municipal urban/suburban bus, tram and light-rail
+contracts worldwide — a read-only reference, not a partnership or
+endorsement.
+
 ## Trust Controls
 - `:urban-transit-dispatch-governor` never lets a proposal for an
   unregistered/unverified route, or a dispatch-scheduling proposal
