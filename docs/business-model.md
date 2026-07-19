@@ -25,9 +25,36 @@
 - role-based access and immutable audit ledger
 
 ## Revenue
-- self-host setup fee
-- managed hosting subscription per route/depot
-- support retainer with SLA
+
+### Pricing intelligence (real competitor research, 2026-07-19)
+Microtransit/paratransit dispatch-and-scheduling SaaS (the closest
+commercial comparable to this actor's scheduling/dispatch-coordination
+scope) publishes per-vehicle pricing in the **$20-100/vehicle/month**
+range (Spare Labs industry benchmark). Enterprise fixed-route/
+paratransit platforms (Trapeze PAS, Ecolane Evolution, RouteMatch) do
+not publish list pricing — quotes are negotiated per agency/fleet
+size, consistent with this segment's typical municipal-procurement
+sales motion.
+
+### Tiers
+- **Self-host**: one-time setup fee (fork + seed + integration
+  support), no recurring platform fee — the operator runs its own
+  instance.
+- **Managed Starter**: **¥80,000/month flat** (JPY, no-code Stripe
+  Payment Link), unlimited routes/vehicles/operators for a single
+  small-to-mid operator instance — consistent with the
+  `cloud-itonami` portfolio's existing Managed Starter reference point
+  (`docs/adr/2607161745` at `com-junkawasaki/root`) and comfortably
+  inside the $20-100/vehicle/month real competitor range for an
+  operator in the ~15-50 vehicle band (≈¥8,000-27,000/vehicle-equivalent
+  at that fleet size, well under per-vehicle enterprise list rates).
+- **Managed per-route/depot** (multi-depot operators): negotiated,
+  scaling from the Starter tier baseline.
+- Support retainer with SLA (self-host customers).
+
+No paid tenant yet (self-reported honestly, not fabricated) — see
+`90-docs/business/cloud-itonami-flagship-rollout-ledger.edn` at
+`com-junkawasaki/root` for this vertical's rollout status.
 
 ## Trust Controls
 - `:urban-transit-dispatch-governor` never lets a proposal for an
