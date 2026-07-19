@@ -68,7 +68,12 @@ Use of
 (LEI `969500LMWJBG5RHVJV88`, GLEIF-verified), one of the largest
 operators of municipal urban/suburban bus, tram and light-rail
 contracts worldwide — a read-only reference, not a partnership or
-endorsement.
+endorsement. Two further real-world urban-bus operators archived in
+the same catalog:
+[**ComfortDelGro Corporation Limited**](https://github.com/cloud-itonami/cloud-itonami-lei-2549005o5pva2jch6q33)
+(LEI `2549005O5PVA2JCH6Q33`, Singapore/UK/Australia/China) and
+[**FirstGroup plc**](https://github.com/cloud-itonami/cloud-itonami-lei-549300dejzcpwa4hkm93)
+(LEI `549300DEJZCPWA4HKM93`, UK First Bus network).
 
 ## Trust Controls
 - `:urban-transit-dispatch-governor` never lets a proposal for an
