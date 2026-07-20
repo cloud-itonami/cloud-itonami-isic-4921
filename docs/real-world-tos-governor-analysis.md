@@ -1,10 +1,10 @@
 # Real-world published terms vs. the Urban Transit Dispatch Governor
 
 **As-of**: 2026-07-19
-**Compares**: the archived `:tos/full-text` of 9 real operators (7
-fixed-route urban-transit operators + 2 taxi/rideshare platforms) in
-the `cloud-itonami-lei` catalog (all retrieved 2026-07-19) against
-this repo's own `src/transitops/governor.cljc`.
+**Compares**: the archived `:tos/full-text` of 10 real operators (7
+fixed-route urban-transit operators + 3 taxi/rideshare platforms) in
+the `cloud-itonami-lei` catalog (retrieved 2026-07-19/20) against this
+repo's own `src/transitops/governor.cljc`.
 
 | Company | LEI repo | Document type actually archived |
 |---|---|---|
@@ -17,6 +17,7 @@ this repo's own `src/transitops/governor.cljc`.
 | SBS Transit Ltd | [cloud-itonami-lei-254900em62y5rrtj9771](https://github.com/cloud-itonami/cloud-itonami-lei-254900em62y5rrtj9771) | website Conditions for Use |
 | Uber Technologies, Inc. | [cloud-itonami-lei-549300b2ftg34fildr98](https://github.com/cloud-itonami/cloud-itonami-lei-549300b2ftg34fildr98) | U.S. Terms of Service (taxi/rideshare) |
 | Grab Holdings Inc. | [cloud-itonami-lei-549300g8zpnq5dni6a45](https://github.com/cloud-itonami/cloud-itonami-lei-549300g8zpnq5dni6a45) | Singapore Terms of Service: Transport, Delivery and Logistics (taxi/rideshare) |
+| Lyft, Inc. | [cloud-itonami-lei-549300h7i5vn334xvz52](https://github.com/cloud-itonami/cloud-itonami-lei-549300h7i5vn334xvz52) | U.S. Terms of Service (taxi/rideshare) |
 
 ## Methodology and an honest limitation (read this before the findings)
 
@@ -112,8 +113,8 @@ actual licensing authority.
 
 This actor's own scope (README) names "taxi/rideshare dispatch"
 alongside fixed-route bus/tram service, so the catalog also archives
-two real ride-hailing platforms. Unlike Findings 1–3, this one is a
-genuine **contrast**, not a parallel — worth recording precisely
+three real ride-hailing platforms. Unlike Findings 1–3/5/6, this one is
+a genuine **contrast**, not a parallel — worth recording precisely
 because an honest analysis reports what it actually finds, not only
 the confirmations.
 
@@ -130,6 +131,17 @@ company primarily as a technology-platform intermediary between riders
 and independent transportation providers (§8), with disputes routed to
 binding individual arbitration (§2) rather than litigated on the
 platform's own duty of care.
+
+Lyft, Inc.'s own Terms of Service state plainly:
+
+> "Lyft is not responsible for the conduct, whether online or offline,
+> of any User of the Lyft Platform, Lyft Services, Third-Party
+> Services, or Rideshare Services. You are solely responsible for your
+> interactions with other Users."
+
+Three large, independent ride-hailing platforms (Grab, Uber, Lyft) now
+converge on the identical contrast — this is a consistent industry
+pattern, not one company's idiosyncratic drafting.
 
 `transitops.governor` takes the structurally opposite position:
 `vehicle-unverified-violations` and `operator-unverified-violations`

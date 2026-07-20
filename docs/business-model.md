@@ -90,7 +90,9 @@ dispatch alongside fixed-route service, so the catalog also archives
 [**Uber Technologies, Inc.**](https://github.com/cloud-itonami/cloud-itonami-lei-549300b2ftg34fildr98)
 (LEI `549300B2FTG34FILDR98`) and
 [**Grab Holdings Inc.**](https://github.com/cloud-itonami/cloud-itonami-lei-549300g8zpnq5dni6a45)
-(LEI `549300G8ZPNQ5DNI6A45`, Southeast Asia) — see this repo's
+(LEI `549300G8ZPNQ5DNI6A45`, Southeast Asia) and
+[**Lyft, Inc.**](https://github.com/cloud-itonami/cloud-itonami-lei-549300h7i5vn334xvz52)
+(LEI `549300H7I5VN334XVZ52`, North America) — see this repo's
 `docs/real-world-tos-governor-analysis.md` for a genuinely different
 finding for these two: their own published terms explicitly disclaim
 verifying driver/partner suitability, a contrast with (not a
