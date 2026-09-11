@@ -14,7 +14,7 @@ Walk through the full disposition set — clean auto-commits, an always-escalati
 clojure -M:run
 ```
 
-The demo driver (`src/transitops/sim.cljc`) shows the OperationActor, the Urban Transit Dispatch Governor, and how a safety-concern flag or a high-cost maintenance order never auto-commits.
+The demo driver (`src/transitops/sim.cljk`) shows the OperationActor, the Urban Transit Dispatch Governor, and how a safety-concern flag or a high-cost maintenance order never auto-commits.
 
 ## Regenerate the live operator console
 
@@ -33,11 +33,11 @@ clojure -M:test
 ```
 
 Key test modules:
-- `test/transitops/governor_test.clj` — the five HARD checks (route-unverified, vehicle-unverified, operator-unverified, effect-not-propose, scope-excluded) and the scope-exclusion self-trip regression test
-- `test/transitops/phase_test.clj` — Phase 0→3 invariants; `:flag-safety-concern` never auto-eligible at any phase
-- `test/transitops/advisor_test.clj` — advisor proposal shape and consistency
-- `test/transitops/governor_contract_test.clj` — full graph integration, audit trail
-- `test/transitops/store_contract_test.clj` — Store protocol and MemStore implementation
+- `test/transitops/governor_test.cljk` — the five HARD checks (route-unverified, vehicle-unverified, operator-unverified, effect-not-propose, scope-excluded) and the scope-exclusion self-trip regression test
+- `test/transitops/phase_test.cljk` — Phase 0→3 invariants; `:flag-safety-concern` never auto-eligible at any phase
+- `test/transitops/advisor_test.cljk` — advisor proposal shape and consistency
+- `test/transitops/governor_contract_test.cljk` — full graph integration, audit trail
+- `test/transitops/store_contract_test.cljk` — Store protocol and MemStore implementation
 
 ## Lint
 
@@ -70,7 +70,7 @@ clojure -M:lint
 The **Urban Transit Dispatch Governor** sits at:
 
 ```
-src/transitops/governor.cljc
+src/transitops/governor.cljk
 ```
 
 Five HARD checks (all permanent, non-overrideable): route-unverified,
@@ -86,13 +86,13 @@ threshold.
 
 | File | Role |
 |---|---|
-| `src/transitops/store.cljc` | Store protocol (MemStore); string-keyed route/vehicle/operator directories; append-only audit ledger |
-| `src/transitops/advisor.cljc` | TransitDispatchAdvisor (contained intelligence node; mock or real-LLM seam) |
-| `src/transitops/governor.cljc` | Urban Transit Dispatch Governor — independent compliance layer, five HARD checks |
-| `src/transitops/phase.cljc` | Phase table (0→3): read-only → assisted logging → assisted scheduling → supervised-auto |
-| `src/transitops/operation.cljc` | OperationActor (langgraph StateGraph) |
-| `src/transitops/sim.cljc` | Demo driver |
-| `src/transitops/render_html.clj` | Build-time HTML renderer for the live operator console |
+| `src/transitops/store.cljk` | Store protocol (MemStore); string-keyed route/vehicle/operator directories; append-only audit ledger |
+| `src/transitops/advisor.cljk` | TransitDispatchAdvisor (contained intelligence node; mock or real-LLM seam) |
+| `src/transitops/governor.cljk` | Urban Transit Dispatch Governor — independent compliance layer, five HARD checks |
+| `src/transitops/phase.cljk` | Phase table (0→3): read-only → assisted logging → assisted scheduling → supervised-auto |
+| `src/transitops/operation.cljk` | OperationActor (langgraph StateGraph) |
+| `src/transitops/sim.cljk` | Demo driver |
+| `src/transitops/render_html.cljk` | Build-time HTML renderer for the live operator console |
 
 ## Business model & operations
 
@@ -113,7 +113,7 @@ Operators must prove:
 
 1. **Read the README** (`../README.md`) for full architecture and context.
 2. **Run the demo**: `clojure -M:run`
-3. **Explore the Governor**: `src/transitops/governor.cljc` and its tests
+3. **Explore the Governor**: `src/transitops/governor.cljk` and its tests
 4. **Fork and seed**: replace the demo route/vehicle/operator directory with your own, following the steps above
 
 ---

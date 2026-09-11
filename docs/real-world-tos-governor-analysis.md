@@ -4,7 +4,7 @@
 **Compares**: the archived `:tos/full-text` of 10 real operators (7
 fixed-route urban-transit operators + 3 taxi/rideshare platforms) in
 the `cloud-itonami-lei` catalog (retrieved 2026-07-19/20) against this
-repo's own `src/transitops/governor.cljc`.
+repo's own `src/transitops/governor.cljk`.
 
 | Company | LEI repo | Document type actually archived |
 |---|---|---|
@@ -243,4 +243,4 @@ jurisdictions, and it is the same principle
 
 - The 7 LEI repos linked in the table above (source documents)
 - `cloud-itonami-isic-4922/docs/real-world-tos-governor-analysis.md` (the Flix SE Conditions-of-Carriage analysis, the stronger evidence)
-- `src/transitops/governor.cljc` (the compared implementation)
+- `src/transitops/governor.cljk` (the compared implementation)
