@@ -11,7 +11,7 @@
 Walk through the full disposition set — clean auto-commits, an always-escalating safety-concern flag, a high-cost maintenance order requiring sign-off, and four distinct HARD-hold reasons (unregistered route, registered-but-unverified route, unverified vehicle, unverified operator):
 
 ```bash
-clojure -M:run
+kbb -M:run
 ```
 
 The demo driver (`src/transitops/sim.cljk`) shows the OperationActor, the Urban Transit Dispatch Governor, and how a safety-concern flag or a high-cost maintenance order never auto-commits.
@@ -23,13 +23,13 @@ The same actor stack, driven through a trimmed scenario, renders
 regenerated nightly by `.github/workflows/regenerate.yml`):
 
 ```bash
-clojure -M:dev:render-html
+kbb -M:dev:render-html
 ```
 
 ## Run tests
 
 ```bash
-clojure -M:test
+kbb -M:test
 ```
 
 Key test modules:
@@ -42,7 +42,7 @@ Key test modules:
 ## Lint
 
 ```bash
-clojure -M:lint
+kbb -M:lint
 ```
 
 ## Fork and seed your own operator data
@@ -112,7 +112,7 @@ Operators must prove:
 ## Next steps
 
 1. **Read the README** (`../README.md`) for full architecture and context.
-2. **Run the demo**: `clojure -M:run`
+2. **Run the demo**: `kbb -M:run`
 3. **Explore the Governor**: `src/transitops/governor.cljk` and its tests
 4. **Fork and seed**: replace the demo route/vehicle/operator directory with your own, following the steps above
 
