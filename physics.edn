@@ -1,0 +1,34 @@
+;; What this vertical's robot physically does, declared for
+;; kotoba.robotics.process (kotoba-lang/robotics). `kbb -M:dev:physics` runs it.
+;;
+;; README "Robotics premise": in urban / suburban passenger transport
+;; (ISIC 4921) the physical work -- driving the bus, tram, railcar or taxi --
+;; is done by a licensed human operator, not a robot; this actor schedules
+;; and dispatches. What it schedules is still physics: how long a loaded bus
+;; takes between stops on a hill, and how far a tram needs to stop. These
+;; cases measure the vehicles the dispatch plans rely on; no robot drives.
+;;
+;; Every number without a cited source is marked `estimate` in its :basis.
+;; Replacing an estimate with a sourced value is this bot's growth work.
+{:physics/schema "itonami.physical-ai.spec.v1"
+ :repo "cloud-itonami/cloud-itonami-isic-4921"
+ :cases
+ [{:id :bus-stop-to-stop-uphill
+   :kind :transport
+   :procedure "12 t city bus runs a 400 m stop-to-stop leg up a 4 degree street; the passenger load (0 to ~80 people at ~75 kg) is swept"
+   :params {:mass-kg 12000.0 :distance-m 400.0 :v-max-mps 13.9 :a-max-mps2 1.0
+            :brake-decel-mps2 1.2 :drive-force-n 25000.0 :crr 0.008 :slope-deg 4.0
+            :cog-height-m 1.0 :support-half-length-m 2.9 :max-time-s 900.0}
+   :sweep {:param :payload-kg :values [0.0 1500.0 3000.0 4500.0 6000.0]}
+   :quantity :cycle-time-s
+   :limit {:max 45.0 :basis "estimate: the timetable's running time for this leg; traction force and service braking with standing passengers are estimates too"}
+   :boundary {:lo 0.0 :hi 20000.0}}
+  {:id :tram-service-stop
+   :kind :transport
+   :procedure "40 t tram with 10 t of passengers brakes from 50 km/h to a stop; the achievable deceleration is swept from low-adhesion to magnetic-track-brake emergency levels"
+   :params {:mass-kg 40000.0 :payload-kg 10000.0 :distance-m 800.0 :v-max-mps 13.9 :a-max-mps2 1.0
+            :drive-force-n 60000.0 :crr 0.002 :cog-height-m 1.2 :support-half-length-m 5.0 :max-time-s 900.0}
+   :sweep {:param :brake-decel-mps2 :values [0.8 1.2 1.6 2.0 2.5 3.0]}
+   :quantity :stopping-distance-m
+   :limit {:max 60.0 :basis "estimate: sight-distance the driver has at a typical street-running junction; reaction distance is not included"}
+   :boundary {:lo 0.3 :hi 4.0}}]}
