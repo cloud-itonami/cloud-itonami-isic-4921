@@ -1,6 +1,6 @@
 (ns transitops.store-contract-test
   "Contract tests for `transitops.store/Store` protocol."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [transitops.store :as store]))
 
 (deftest mem-store-route-lookup

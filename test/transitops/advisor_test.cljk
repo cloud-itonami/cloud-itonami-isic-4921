@@ -1,6 +1,6 @@
 (ns transitops.advisor-test
   "Unit tests of `transitops.advisor` proposal generation."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [transitops.advisor :as adv]
             [transitops.store :as store]))
 
